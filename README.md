@@ -8,7 +8,7 @@ Add to `.pre-commig-config.yaml`:
 
 ```
 repos:
-  - repo: https://github.com/pytholic/commit-msg-hook.git
+  - repo: https://github.com/pytholic/git-custom-precommit-hooks.git
     rev: main
     hooks:
       - id: check-commit-msg
