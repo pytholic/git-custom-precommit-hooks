@@ -20,7 +20,7 @@ Then run:
 pre-commit install --hook-type commit-msg
 ```
 
-To run the tests:
+To test, create a branch MOPS-XXX and run:
 
 ```
 cd tests
