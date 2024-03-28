@@ -11,7 +11,7 @@ def test_commit_msg(commit_msg):
 
     # Run the commit-msg hook script with the temporary file as argument
     result = subprocess.run(
-        ["../custom-hooks/commit_msg_hook.sh", tmp.name], capture_output=True, text=True
+        ["../custom-hooks/commit_msg_hook.sh", tmp_file.name], capture_output=True, text=True
     )
     exit_code = result.returncode
 
