@@ -5,9 +5,9 @@ import tempfile
 # Define the function to test the commit message format
 def test_commit_msg(commit_msg):
     # Write the commit message to a temporary file
-    with tempfile.NamedTemporaryFile(mode="w", delete=False) as tmp:
-        tmp.write(commit_msg)
-        tmp.flush()  # Ensure the file is written to disk
+    tmp_file = tempfile.NamedTemporaryFile(mode="w", delete=True)
+    tmp_file.write(commit_msg)
+    tmp_file.flush()  # Ensure the file is written to disk
 
     # Run the commit-msg hook script with the temporary file as argument
     result = subprocess.run(
@@ -23,8 +23,9 @@ def test_commit_msg(commit_msg):
         print("Test FAILED.")
 
     print("*" * 50)
+
     # Clean up the temporary file
-    subprocess.run(["rm", tmp.name])
+    tmp_file.close()
 
 
 if __name__ == "__main__":
