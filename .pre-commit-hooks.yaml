@@ -1,0 +1,5 @@
+- id: check-commit-msg
+  name: Check commit message format
+  language: script
+  entry: ./custom-hooks/commit_msg_hook.sh
+  stages: [commit-msg]
