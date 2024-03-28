@@ -4,7 +4,7 @@ A repository with custom git pre-commit hooks.
 
 ## Commit message hook
 
-Add to `.pre-commig-config.yaml`:
+Add to `.pre-commit-config.yaml`:
 
 ```
 repos:
